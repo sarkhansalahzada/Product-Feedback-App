@@ -8,8 +8,6 @@
   text-decoration: none;
 }
 
-
-
 .gradient-feed {
   background: radial-gradient(
     128.88% 128.88% at 103.9% -10.39%,
@@ -30,11 +28,16 @@ select {
   background-color: #3a4374;
 }
 
+
 .add-feed > button, .add-feedback > button{
-  background-color: #a337f6;
+  background-color: #a337f6!important;
 }
 .add-feed > button:hover, .add-feedback > button:hover{
-  background-color: #b555ff;
+  background-color: #b555ff!important;
+}
+
+.btn:hover{
+  background-color: #d5dbff!important;
 }
 
 h2, h3, h5 {
@@ -43,6 +46,7 @@ h2, h3, h5 {
 
 .counter-btn, .feature-btn {
   background-color: #f2f4ff;
+  border-radius: 8px!important;
 }
 
 .menu{
@@ -157,7 +161,7 @@ h2, h3, h5 {
 }
 
 .menu__icon {
-  background: #3a4374;
+  background: #fff;
   display: block;
   height: 2px;
   position: relative;
@@ -167,7 +171,7 @@ h2, h3, h5 {
 
 .menu__icon:before,
 .menu__icon:after {
-  background: #3a4374;
+  background: #fff;
   content: "";
   display: block;
   height: 100%;
@@ -184,21 +188,6 @@ h2, h3, h5 {
   bottom: -6px;
 }
 
-#menu__toggle:checked + .menu__btn .menu__icon {
-  background: transparent;
-}
-
-#menu__toggle:checked + .menu__btn .menu__icon:before {
-  transform: rotate(-45deg);
-  top: 0;
-}
-
-#menu__toggle:checked + .menu__btn .menu__icon:after {
-  transform: rotate(45deg);
-  bottom: 0;
-}
-
-/* Slide-in animation for the main bar */
 .main-bar {
   
   display: none;
