@@ -8,6 +8,8 @@
   text-decoration: none;
 }
 
+
+
 .gradient-feed {
   background: radial-gradient(
     128.88% 128.88% at 103.9% -10.39%,
@@ -41,4 +43,172 @@ h2, h3, h5 {
 
 .counter-btn, .feature-btn {
   background-color: #f2f4ff;
+}
+
+.menu{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mt-5{
+    margin-top: unset!important;
+  }
+
+  .mb-4{
+    margin-bottom: unset!important;
+  }
+  .pt-5{
+    padding-top: unset!important;
+  }
+
+  .rounded-3{
+    border-radius: 0!important;
+  }
+
+  .row>*{
+    padding-left: unset!important;
+    padding-right: unset!important;
+  }
+
+  .feed-empty {
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .icon, .suggest{
+    display: none;
+  }
+
+  .main-bar {
+    position: absolute;
+    top: 120px;
+    right: 30px;
+    z-index: 2;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    >.boxes{
+      border-radius: 8px!important;
+      margin: 30px 20px!important;
+    }
+  } 
+  
+  .roadmap-box {
+    top: 290px;
+    right: 30px;
+    border-radius: 8px!important;
+    margin: 30px 20px!important;
+  }
+  #menu__toggle:checked + .all-box{
+    display: flex;
+  }
+  
+  .gradient-feed {
+    width: 100%;
+    height: 90px;
+    top: 0;
+    left: 0;
+    border-radius: unset;
+  } 
+  nav,
+  .sug-sort-box {
+    padding-top: 20px;
+    z-index: -1;
+    width: 100%;
+    border-radius: unset;
+  }
+
+  .menu{
+    display: block;
+  }
+  .content{
+    z-index: 1;
+  }
+
+  .hamburger-menu{
+    position: fixed;
+    z-index: 3;
+    margin-left: 300px;
+    margin-top: -65px;
+  }
+
+  .hamburger-menu input{
+    display: none;
+  }
+
+
+  .add-feedback button, .add-feed button{
+    border-radius: 8px!important;
+  }
+
+  .hamburger-menu > input{
+    width: 30px;
+  }
+
+
+
+  .menu__btn {
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 18px;
+  margin-left: 30px;
+  position: relative;
+  padding: 0;
+}
+
+.menu__icon {
+  background: #3a4374;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.5s ease-out;
+  width: 20px;
+}
+
+.menu__icon:before,
+.menu__icon:after {
+  background: #3a4374;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: transform 0.5s ease-out;
+  width: 100%;
+}
+
+.menu__icon:before {
+  top: -6px;
+}
+
+.menu__icon:after {
+  bottom: -6px;
+}
+
+#menu__toggle:checked + .menu__btn .menu__icon {
+  background: transparent;
+}
+
+#menu__toggle:checked + .menu__btn .menu__icon:before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+#menu__toggle:checked + .menu__btn .menu__icon:after {
+  transform: rotate(45deg);
+  bottom: 0;
+}
+
+/* Slide-in animation for the main bar */
+.main-bar {
+  
+  display: none;
+  position: fixed;
+  top: 90px;
+  right: 0;
+  height: 100vh;
+  width: 330px;
+  background-color: white;
+  transition: right 0.5s ease-in-out;
+  z-index: 2;
+}
 }
