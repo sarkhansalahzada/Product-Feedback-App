@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Jost;
+  text-decoration: none;
+}
+
+.gradient-feed {
+  background: radial-gradient(
+    128.88% 128.88% at 103.9% -10.39%,
+    #e84d70 0%,
+    #a337f6 53.09%,
+    #28a7ed 100%
+  )}
+
+.text-secondary::marker{
+  color: #f49f85;
+}
+
+nav {
+  background-color: #3a4374;
+}
+
+select {
+  background-color: #3a4374;
+}
+
+.add-feed > button, .add-feedback > button{
+  background-color: #a337f6;
+}
+.add-feed > button:hover, .add-feedback > button:hover{
+  background-color: #b555ff;
+}
+
+h2, h3, h5 {
+  color: #3a4374;
+}
+
+.counter-btn, .feature-btn {
+  background-color: #f2f4ff;
+}
