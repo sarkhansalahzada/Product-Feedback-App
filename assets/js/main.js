@@ -91,3 +91,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   sortDropdown.value = "most-up";
 });
+
+// Add Feedback Open window loc
+document.addEventListener("DOMContentLoaded", function () {
+  const feedbacksSection = document.getElementById("feedbacks");
+  const sortDropdown = document.getElementById("sort");
+  const menuToggle = document.getElementById('menu__toggle');
+  const mainBar = document.querySelector('.main-bar');
+  let feedbackData = [];
+  let filteredData = [];
+
+  const addFeedbackButton = document.querySelector('.add-feedback button');
+  if (addFeedbackButton) {
+    addFeedbackButton.addEventListener('click', () => {
+      window.location.href = './assets/pages/create-feedback.html';
+    });
+  }
+  
+});
