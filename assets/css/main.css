@@ -44,16 +44,29 @@ h2, h3, h5 {
   color: #3a4374;
 }
 
-.counter-btn, .feature-btn {
-  background-color: #f2f4ff;
+.counter-btn,.text-feed-box button{
   border-radius: 8px!important;
+  background-color: #f2f4ff;
 }
+
+.feedback-count :hover, .text-feed button:hover{
+  background-color: #c4cdff!important;
+}
+
+.add-new-feedback, .boxes, .roadmap-box, .gradient-feed, nav{
+  box-shadow: #f2f4ff 0px 3px 8px;
+}
+
 
 .menu{
   display: none;
 }
 
-@media (max-width: 768px) {
+label{
+  font-size: 2px;
+}
+
+ @media (max-width: 768px) {
   .mt-5{
     margin-top: unset!important;
   }
@@ -140,6 +153,20 @@ h2, h3, h5 {
     display: none;
   }
 
+  .feedbacks{
+    padding: 0 20px;
+  }
+
+  .add-new-feedback{
+    border-radius: 12px!important;
+    display: block!important;
+    > .feedback-count button{
+      margin-left: 15px;
+      border-radius: 12px!important;
+      padding: 0 25px!important;
+      margin-top: 15px!important;
+    }
+  }
 
   .add-feedback button, .add-feed button{
     border-radius: 8px!important;
@@ -148,8 +175,6 @@ h2, h3, h5 {
   .hamburger-menu > input{
     width: 30px;
   }
-
-
 
   .menu__btn {
   cursor: pointer;
@@ -200,4 +225,4 @@ h2, h3, h5 {
   transition: right 0.5s ease-in-out;
   z-index: 2;
 }
-}
+} 
