@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Jost;
+  text-decoration: none;
+}
+
+.container, .go-back{
+  width: 55%!important;
+}
+
+p {
+  margin-bottom: 0!important;
+}
+
+.edit-icon img{
+  height: 75px;
+  position: absolute;
+  padding-right: 305px;
+  padding-top: 22px;
+}
+
+.cancel-btn button{
+  background-color: #3a4374;
+}
+
+.add-btn button{
+  background-color: #a337f6;
+}
+
+.add-btn button:hover{
+  background-color: #b555ff!important;
+}
+.cancel-btn button:hover{
+  background-color: #5a607d!important;
+}
+
+@media (max-width: 768px) {
+  .container, .go-back {
+    width: 95%!important;
+  }
+
+  .edit-icon img {
+    height: 75px;
+    padding-right: 240px;
+    padding-top: 24px;
+  }
+
+  .cancel-add{
+    flex-direction: column-reverse;
+    width: fit-content;
+  }
+  
+  .cancel-btn button, .add-btn button{
+    width: fit-content;
+    width: 292px;
+    padding: 15px 0!important;
+    border-radius: 12px!important;
+  }
+
+  textarea{
+    height: 200px!important;
+  }
+}
