@@ -25,6 +25,9 @@ addFeedbackBtn.addEventListener('click', () => {
   categorySelect.value = 'Feature'; // Reset to default value
   detailInput.value = '';
   
-  // Optionally, you can display a success message or perform any other actions here
-  alert('Feedback added successfully!');
-    });
+  Swal.fire({
+    icon: 'success',
+    title: 'Good job!',
+    text: 'Feedback added successfully!',
+  });
+});
