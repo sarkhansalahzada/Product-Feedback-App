@@ -38,6 +38,9 @@ p {
   background-color: #5a607d!important;
 }
 
+.text-area input{
+  height: 100px!important;
+}
 @media (max-width: 768px) {
   .container, .go-back {
     width: 95%!important;
@@ -61,7 +64,4 @@ p {
     border-radius: 12px!important;
   }
 
-  textarea{
-    height: 200px!important;
-  }
 }
