@@ -10,16 +10,12 @@ addFeedbackBtn.addEventListener('click', () => {
     detail: detailInput.value,
   };
   
-  // Get existing feedback data from local storage (if any)
   let existingFeedback = JSON.parse(localStorage.getItem('feedbackData')) || [];
   
-  // Add the new feedback to the existing data
   existingFeedback.push(feedback);
   
-  // Store the updated feedback data in local storage
   localStorage.setItem('feedbackData', JSON.stringify(existingFeedback));
   
-  // Clear form inputs
   titleInput.value = '';
   categorySelect.value = 'Feature'; 
   detailInput.value = '';
