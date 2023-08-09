@@ -4,15 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.getElementById('menu__toggle');
   const mainBar = document.querySelector('.main-bar');
   let feedbackData = [];
-  let filteredData = []; // Declare filteredData variable
+  let filteredData = []; 
 
-  // Fetch data from JSON file
   fetch("./assets/json/feedback.json")
     .then(response => response.json())
-    .then(data => {
-      feedbackData = data;
-      displayFeedbacks(feedbackData);
-    })
+    .then(displayFeedbacks)
     .catch(error => console.error("Error fetching data:", error));
 
   function displayFeedbacks(data) {
@@ -21,11 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
     data.forEach(feedback => {
       const feedbackContainer = document.createElement("section");
       feedbackContainer.className = "add-new-feedback rounded-3 w-100 bg-white p-3 d-flex mt-3 gap-4";
-      // Create and populate elements for feedback information
       const feedbackCount = document.createElement("div");
       feedbackCount.className = "feedback-count align-self-center justify-content-between";
       
-      // Get current upvote count from local storage or use feedback.reiting if not available
       const currentUpvotes = localStorage.getItem(feedback.id) || feedback.reiting;
       
       feedbackCount.innerHTML = `
@@ -36,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
       `;
       
       feedbackCount.querySelector(".counter-btn").addEventListener("click", () => {
-        // Increment the upvote count in local storage and update the display
         const newUpvotes = parseInt(currentUpvotes) + 1;
         localStorage.setItem(feedback.id, newUpvotes);
         feedbackCount.innerHTML = `
@@ -60,10 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
           <span>${feedback.comment}</span>
         </div>
       `;
-      // Append elements to feedback container
       feedbackContainer.appendChild(feedbackCount);
       feedbackContainer.appendChild(textFeedBox);
-      // Append feedback container to feedbacks section
       feedbacksSection.appendChild(feedbackContainer);
     });
   }
@@ -73,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener("click", () => {
       const selectedCategory = button.parentElement.className;
       if (selectedCategory === 'all') {
-        displayFeedbacks(feedbackData); // Show all feedbacks
+        displayFeedbacks(feedbackData); 
       } else {
         filteredData = feedbackData.filter(feedback => feedback.category.toLowerCase() === selectedCategory);
         displayFeedbacks(filteredData);
@@ -92,7 +83,6 @@ document.addEventListener("DOMContentLoaded", function () {
   sortDropdown.value = "most-up";
 });
 
-// Add Feedback Open window loc
 document.addEventListener("DOMContentLoaded", function () {
   const feedbacksSection = document.getElementById("feedbacks");
   const sortDropdown = document.getElementById("sort");
