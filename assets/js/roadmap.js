@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Fetch and display feedbacks from JSON data
   function displayFeedbacks(feedbacks) {
-    feedbacksSection.innerHTML = ''; // Clear the existing content
+    feedbacksSection.innerHTML = '';
 
     feedbacks.forEach(feedback => {
       const feedbackHTML = `

@@ -3,7 +3,6 @@ const categorySelect = document.getElementById('category');
 const detailInput = document.querySelector('.value-text.text-area input[type="text"]');
 const addFeedbackBtn = document.querySelector('.add-btn button');
 
-// Add event listener to the "Add Feedback" button
 addFeedbackBtn.addEventListener('click', () => {
   const feedback = {
     title: titleInput.value,
@@ -22,12 +21,11 @@ addFeedbackBtn.addEventListener('click', () => {
   
   // Clear form inputs
   titleInput.value = '';
-  categorySelect.value = 'Feature'; // Reset to default value
+  categorySelect.value = 'Feature'; 
   detailInput.value = '';
   
   Swal.fire({
     icon: 'success',
-    title: 'Good job!',
     text: 'Feedback added successfully!',
   });
 });
